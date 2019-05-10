@@ -38,4 +38,34 @@
       </div>
     </div>
   </div>
+
+    <div class="container">
+    <div>Search by Brand</div>
+    <div>
+      <input [(ngModel)]="searchText" name="titleSearch"/>
+    </div>
+    <div>
+      <button (click)="findProductsByBrand()">Search</button>
+    </div>
+    <div>
+      <ul *ngFor="let p of productResults">
+        <li>
+
+        {{p.price}}
+        </li>
+        <li>
+
+            {{p.brand}}
+            </li>
+            <li>
+
+                {{p.color}}
+                </li>
+                <li>
+
+                    {{p.category}}
+                    </li>
+      </ul>
+    </div>
+  </div>
 </div>
